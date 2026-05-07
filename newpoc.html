@@ -62,7 +62,8 @@
       document.getElementById(pageId).classList.add('active');
 
       // Simulate URL change (important for Clarity)
-      history.pushState({}, '', '#' + pageId);
+     history.pushState({}, '', '#' + pageId);
+     window.dispatchEvent(new Event('popstate'));
     }
   </script>
 
